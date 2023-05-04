@@ -100,7 +100,7 @@ body {
 
 
 
-<body>
+<body onload="MyFunction()">
 
 
 <h1 class="main shadow bounce"> List de Quiz</h1>
@@ -108,25 +108,25 @@ body {
 <div class="center">
  <div class="row">
   <div class="column">
-    <button  id="davinci" style="width: 300px; height: 250px;" value="davinci" onclick="say('Léonard de Vinci est né le 14 avril 1452')"> <img src="quizzicons/davinci.jpeg" alt="Quizz 1" style="width: 100%; height: 100%;"></button>
+    <button  id="davinci" style="width: 300px; height: 250px;" value="davinci" onclick="say('une des sculptures connue de Léonard de Vinci etait le chevalier')"> <img src="quizzicons/davinciscultures.jpeg" alt="Quizz 1" style="width: 100%; height: 100%;"></button>
   </div>
   <div class="column">
-    <button class="button" id="vangogh" style="width: 300px; height: 250px;" value="vangogh" onclick="say('Vangogh est né le 30 mars 1853')"> <a href="vangogh.html"><img src="quizzicons/vangogh.jpeg" alt="Quizz 2" style="width: 100%; height: 100%;"></a></button>
+    <button class="button" id="vangogh" style="width: 300px; height: 250px;" value="vangogh" onclick="say('Voici la joconde')"> <a href="joconde.html"><img src="quizzicons/davincipeintures.jpeg" alt="Quizz 2" style="width: 100%; height: 100%;"></a></button>
   </div>
   <div class="column">
-    <button id="picasso" style="width: 300px; height: 250px;" value="picasso" onclick="say('Picasso est né le 25 octobre 1881')"><img src="quizzicons/picasso.png" alt="Quizz 3" style="width: 100%; height: 100%;"></button>
+    <button id="picasso" style="width: 300px; height: 250px;" value="picasso" ><img src="quizzicons/davinciinventions.jpeg" alt="Quizz 3" style="width: 100%; height: 100%;"></button>
   </div>
 </div>
 
 <div class="row">
   <div class="column">
-    <button class="button" id="modigliani" style="width: 300px; height: 250px;" value="modigliani" onclick="say('Modigliani est né le 12 juillet 1884')"><img src="quizzicons/modigliani.jpeg" alt="Quizz 1" style="width: 100%; height: 100%;"></button>
+    <button class="button" id="retour" style="width: 300px; height: 250px;" value="retour" ><a href="secondpage.html"><img src="quizzicons/retour.png" alt="Quizz 1" style="width: 100%; height: 100%;"></a></button>
   </div>
   <div class="column">
-    <button class="button" id="frida" style="width: 300px; height: 250px;" value="frida" onclick="say('Frida Kahlo est né le 6 juillet 1907')"><img src="quizzicons/frida.jpeg" alt="Quizz 2" style="width: 100%; height: 100%;"></button>
+    <button class="button" id="frida" style="width: 300px; height: 250px;" value="frida"><img src="quizzicons/davinciarchitecture.jpeg" alt="Quizz 2" style="width: 100%; height: 100%;"></button>
   </div>
   <div class="column">
-    <button class="button" id="pepper" style="width: 300px; height: 250px;" value="pepper" onclick="say('Informations générales sur l'exposition ')"><a href="quizz.html"><img src="quizzicons/pepper.png" alt="Quizz 3" style="width: 100%; height: 100%;"></a></button>
+    <button class="button" id="pepper" style="width: 300px; height: 250px;" value="pepper"><a href="quizz2.html"><img src="quizzicons/pepper.png" alt="Quizz 3" style="width: 100%; height: 100%;"></a></button>
   </div>
 </div><br>
 </body>
@@ -138,7 +138,11 @@ body {
 </h1>
 </div>
 
-
+<script>
+  function MyFunction(){
+       say('Et nous voila chez Leonardo davinci. Leonardo Davinci est né le 14 avril 1452 a anchiano en italie. il etait un grand peintre, sculteur, architecte, inventeur, philosphe et ingenieur. Grace a cette page la on va decouvrir tous les talents de davinci. Pour en savoir plus sur chaque talent click sur les bottons soit attentif parceque il y aura un quizz lie a chaqun de ces boutons')
+  }
+</script>
 
 </body>
 </html>
