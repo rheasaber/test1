@@ -7,11 +7,6 @@
 <script src="js/script.js"></script>
 
 <style>
-
-.shadow
- {
-			text-shadow: 2px 2px 4px #000000;
-	}
 * {
   box-sizing: border-box;
 }
@@ -25,8 +20,8 @@
 
 .column {
   float: left;
-  width: 85.33%;
-  padding: 5px;
+  width: 45.00%;
+  padding: 50px;
 }
 
 /* Clearfix (clear floats) */
@@ -46,13 +41,16 @@
   text-align: center;
 }
 button{
-   border: none;
+   border: none;;
    cursor: pointer;
    appearance: none;
    background-color: inherit;
    transition: transform .7s ease-in-out;
-   margin-left:900px;
-   margin-top:0px;
+   margin-left:200px;
+   margin-top:250px;
+   color: orange;
+   font-family: fantasy;
+   font-size: 300%;
 }
 .container {
   display: flex;
@@ -78,16 +76,14 @@ button{
 }
 
 body {
-        background-image: url("backgrounds/Kleegif.mp4");
+        background-image: url("backgrounds/vangogh.mp4");
         background-repeat: no-repeat;
         background-size: cover;
       }
 h1 {
-  color: whitesmoke;
+  color: white;
   font-family: fantasy;
   font-size: 300%;
-  font-weight: 900;
-  margin-top:-50px;
 }
 
 </style>
@@ -95,17 +91,32 @@ h1 {
 
 
 
-<body>
+<body onload="MyFunction()">
 
 <div class="center">
 <h3>
-    <div class="container">
-     <h1 class= "shadow" class="bounce">Bienvenus au musée !</h1>
-    </div>
-</div>
+  <h1 class="bounce"><b> Vincent Vangogh </b></h1>
 </h3>
-     <div class="button"></div>
-    <button  id="bienvenu" style="width: 400px; height: 300px;" value="bienvenu"> <a href="secondpage.html"><img src="quizzicons/pepper.png" alt="Quizz 1" style="width: 100%; height: 100%;"> </a> </button>
+</div>
+  
+    
+
+    <div class="row">
+      <div class="column">
+        <button class="button" id="gauche" style="width: 200px; height: 150px;" value="gauche" > <a href="homepagequizz.html"><img src="quizzicons/gauche.png" alt="gauche" style="width: 100%; height: 100%;"></a></button>
+      </div>
+      <div class="column">
+         <button class="button" id="droite" style="width: 200px; height: 150px;" value="droite" ><a href="quizz.html"><img src="quizzicons/droite.png" alt="droite" style="width: 100%; height: 100%;"></a></button>
+      </div>
+    </div>
+  
+
+    <script>
+      function MyFunction(){
+       say('la joconde est une des oeuvres les plus connues de davinci')
+     
+      }
+      </script>
 
 
 </body>

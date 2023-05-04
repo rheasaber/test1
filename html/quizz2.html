@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<script src="libs/qi.js"></script>
+	<script src="js/script.js"></script>
+	
+	<style>
+	.shadow
+	 {
+		text-shadow: 2px 2px 4px #000000;
+	}
+	
+	* {
+	  box-sizing: border-box;
+	}
+	.border {
+		   width:225px;
+		   border-style:solid;
+		   border:2px solid black;
+		 }
+	
+	.main {
+	  text-align: center;
+	}
+	
+	.column {
+	  float: left;
+	  width: 33.33%;
+	  padding: 5px;
+	}
+	
+	/* Clearfix (clear floats) */
+	.row::after {
+	  content: "";
+	  clear: both;
+	  display: table;
+	}
+	
+	input[type="radio"]{
+	transform: scale(1.5);
+	}
+	
+	
+	body {
+			background-image: url("backgrounds/Kleegif_2.gif");
+			background-repeat: no-repeat;
+			background-size: cover;
+		  }
+	<!--gif-->
+	
+	body {
+	 margin: 0;
+	 padding: 0;
+	 height: 100vh;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 font-size: 24px;
+	 color: #fff;
+	 background: #000;
+	 
+	}
+			
+	.gif-container {
+	 position: fixed;
+	 top: 0;
+	 left: 0;
+	 min-width: 100%;
+	 min-height: 100%;
+	 z-index: -1;
+	 background: url(cofetti_image.gif) no-repeat center center fixed;
+	 background-size: cover;
+	}
+	
+	
+	h1 {
+	  color: whitesmoke;
+	  font-family: fantasy;
+	  font-size: 300%;
+	}
+	
+	h3 {
+	  color: whitesmoke;
+	  font-family: apple chancery;
+	  font-size: 150%;
+	}
+	
+	
+</style>
+
+	<title>Pepper Robot Quiz</title>
+	<script>
+		function checkAnswers() {
+			var score = 0;
+			var q1 = document.forms["quiz"]["q1"].value;
+			var q2 = document.forms["quiz"]["q2"].value;
+			var q3 = document.forms["quiz"]["q3"].value;
+			var q4 = document.forms["quiz"]["q4"].value;
+			
+			if (q1 == "a") {
+				score++;
+			}
+			if (q2 == "b") {
+				score++;
+			}
+			if (q3 == "c") {
+				score++;
+			}
+			if (q4 == "d") {
+				score++;
+			}
+			
+			document.getElementById("myVar").innerHTML = score;
+		        if(score==4){
+			   alert("4/4 Felicitations!")
+			   document.body.style.backgroundImage = "url('backgrounds/cofetti_image.gif')";
+		           setTimeout(function() {document.body.style.backgroundImage = "url('backgrounds/kleegif_2.gif')";score=0;
+			                                }, 2000);
+
+			}
+			 if(score==4){document.getElementById("felicitations").innerHTML = "Felicitations!";score=0;}
+			 else{document.getElementById("felicitations").innerHTML = "Presque!";score=0;
+					say(' Bravo Ty es presque champion')
+					
+			 }
+				  
+				   
+		}
+
+	</script>
+</head>
+
+
+
+<body>
+	<h1>Pepper Robot Quiz</h1>
+	
+	<form name="quiz">
+	
+	<div class="main">
+	<div class="row">
+          <div class="column">
+		<h3 class="shadow">Question 1</h3>
+		<input type="radio" name="q1" value="a"> <img src="quizzicons/dv.jpeg" alt="mini image" style="width:25%"><br>
+		<input type="radio" name="q1" value="b"> <img src="quizzicons/dv.jpeg" alt="mini image" style="width:25%"><br>
+		<input type="radio" name="q1" value="c"> c1<br>
+		<input type="radio" name="q1" value="d"> d1<br>
+	   </div>s
+	
+           <div class="column">	
+		<h3 class="shadow">Question 2</h3>
+		<input type="radio" name="q2" value="a"> a2<br>
+		<input type="radio" name="q2" value="b"> b2<br>
+		<input type="radio" name="q2" value="c"> c2<br>
+		<input type="radio" name="q2" value="d"> d2<br>
+	    </div>
+	</div>
+	<div class="row">
+           <div class="column">	
+		<h3 class="shadow">Question 3</h3>
+		<input type="radio" name="q3" value="a"> a3<br>
+		<input type="radio" name="q3" value="b"> b3<br>
+		<input type="radio" name="q3" value="c"> c3<br>
+		<input type="radio" name="q3" value="d"> d3<br>
+	   </div>
+	   <div class="column">
+		<h3 class="shadow">Question 4</h3>
+		<input type="radio" name="q4" value="a"> a4<br>
+		<input type="radio" name="q4" value="b"> b4<br>
+		<input type="radio" name="q4" value="c"> c4<br>
+		<input type="radio" name="q4" value="d"> d4<br>
+	   </div>
+	</div>
+	</div>
+		<br>
+		
+		<input type="button" value="Submit" onclick="checkAnswers()">
+	
+	</form>
+   <div class="main">
+	<p> <span id="myVar"></span>
+	<span id="felicitations"></span></p>
+  </div>
+</body>
+</html>
