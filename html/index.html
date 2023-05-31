@@ -1,77 +1,118 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <script src="libs/qi.js"></script>
-        <script src="js/script.js"></script>
-        <style>
-            *{
-              margin: 0;
-              padding: 0;
-            }
-            div{
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              margin:40px;   
-            }
-            button{
-              border: none;
-              cursor: pointer;
-              appearance: none;
-              background-color: inherit;
-               transition: transform .7s ease-in-out;
-              margin-left:10px;
-            }
-            /* button:hover{
-              transform: rotate(360deg);
-            } */
-            img{
-              width: 400px;
-              height: 400px;
-              alt:"buttonpng";
-              border:"0";
-              object-fit: scale-down;
-            }
-            input[type="email"]{
-              padding:10px;
-              border:2px solid #314de4;
-              outline :none;
-              border-radius:5px;
-              font-size:24px;
-              color:#314de4;
-            }
-            .text{
-              font-size:60px;
-              color:#314de4;
-              font-family:Arial;
-            } 
-            body {
-              background-color: #d6d6d6;
-              text-align: center;   
-              }
-            h1 {
-              font-size: 100px;
-            }
-            p {
-              font-size: 60px;
-            }
-        </style>
-    </head>
-    <body >
-    </script>
-    <h1>Léonard de vinci</h1>
-    <p>Touche les images pour en savoir plus.</p>
-    <div class="flex">
-        <button class="button" onclick="say('Léonard de Vinci a inventé le premier vélo, tu peux aller voir au deuxième étage une maquette')" > <img src="./velo.jpg" /></button>
-        <button class="button" onclick="say('Il a aussi fait beaucoup de recherche sur lanatomy')" > <img src="./baby.jpg"  /></button>
-        <button class="button" onclick="say('Léonard de Vinci est né le 14 avril 1452')" > <img src="./autoportrait.jpg" /></button>
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script src="libs/qi.js"></script>
+<script src="js/script.js"></script>
+
+<style>
+
+.shadow
+ {
+			text-shadow: 2px 2px 4px #000000;
+	}
+* {
+  box-sizing: border-box;
+}
+.border {
+       width:225px;
+       border-style:solid;
+       border:2px solid black;
+     }
+
+
+
+.column {
+  float: left;
+  width: 85.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.main {
+  text-align: center;
+}
+button{
+   border: none;
+   cursor: pointer;
+   appearance: none;
+   background-color: inherit;
+   transition: transform .7s ease-in-out;
+   margin-left:900px;
+   margin-top:0px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.bounce {
+  animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+body {
+        background-image: url("backgrounds/davincibackground.gif");
+        background-repeat: no-repeat;
+        background-size: 2000px;
+	background-position-y:0px ;
+      }
+h1 {
+  color: whitesmoke;
+  font-family: fantasy;
+  font-size: 300%;
+  font-weight: 900;
+  margin-top:-50px;
+}
+
+</style>
+</head>
+
+
+
+<body >
+
+<div class="center">
+<h3>
+    <div class="container">
+     <h1 class= "shadow" class="bounce">Bienvenu.e.s au musée !</h1>
     </div>
-    <div class="flex">
-      <button class="button" width="1200px" onclick="location.href = 'page2.html';say('La Fondation Pierre Gianadda a été créée en 1978')" > 
-        <img src="./gianadda.jpg" width="1200px"/></button>
-  </div>
-    </body>
+</div>
+</h3>
+     <div class="button"></div>
+    <button  id="bienvenu" style="width: 400px; height: 300px;" value="bienvenu"> <a href="secondpage.html"><img src="quizzicons/pepper.png" alt="Quizz 1" style="width: 100%; height: 100%;"> </a> </button>
+<script>
+
+
+	
+</script>
+
+
+</body>
 </html>
-
-
